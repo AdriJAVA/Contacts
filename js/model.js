@@ -3,7 +3,7 @@ class Contact {
         this.name = 'Undefined';
         this.surname = 'Undefined';
         this.tel = 'Undefined';
-        this.sex = "m";
+        this.gender = "m";
     }
     
     setName(name){
@@ -16,6 +16,10 @@ class Contact {
 
     setTel(tel){
         this.tel = tel;
+    }
+
+    setGender(gender){
+        this.gender = gender;
     }
 }
     

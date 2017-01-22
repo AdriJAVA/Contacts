@@ -20,8 +20,8 @@ function printContact() {
     inputPhone.classList = 'phone';
 
     var img = document.createElement('IMG');
-    img.src = 'images/man.png';
-    img.classList = 'imagen';
+    img.src = 'img/m.png';
+    img.classList = 'gender';
 
     var removeSpan = document.createElement('SPAN');
     removeSpan.classList = 'btnRemove';
@@ -39,6 +39,7 @@ function printContact() {
     inputName.addEventListener('blur',appContacts.updateContact);
     inputSurname.addEventListener('blur',appContacts.updateContact);
     inputPhone.addEventListener('blur',appContacts.updateContact);
+    img.addEventListener('click',appContacts.updateContact);
     
     document.getElementById('box').appendChild(div);
      
