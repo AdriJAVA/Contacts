@@ -1,3 +1,3 @@
 # Contacts
 
-adrijava.github.io/Contacts/
+https://adrijava.github.io/Contacts/
