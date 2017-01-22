@@ -1,0 +1,25 @@
+body,html{
+    font-family: 'roboto';;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: powderblue;
+}
+
+#list{
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    
+}
+
+
+#box{
+    overflow: hidden;
+    overflow-y: scroll;
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
