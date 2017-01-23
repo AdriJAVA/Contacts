@@ -14,14 +14,10 @@ var appContacts = (function(){
    
     var deleteContact = function(){
 
-       for(let i = 0; i < contactsDOM.length; i++){
-             if(contactsDOM[i] === this.parentNode){
-                myContacts.delete(i);
-             }
-        }
-
-       this.parentNode.remove();
-       console.table(myContacts.contacts);
+        var index = _getIndex(contactsDOM,this.parentNode);
+        myContacts.delete(index);
+        this.parentNode.remove();
+        console.table(myContacts.contacts);
     }
 
     
