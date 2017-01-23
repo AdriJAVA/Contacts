@@ -65,30 +65,26 @@ var appContacts = (function(){
     //Private methods
     var _editName = function(_this){
          var namesDOM = document.getElementsByClassName('name');
-         for(let i = 0; i < namesDOM.length; i++){
-             if(namesDOM[i] === _this){
-                myContacts.contacts[i].setName(_this.value);
-             }
+         var index = _getIndex(namesDOM,_this);
+         myContacts.contacts[index].setName(_this.value);
         }
-    }
+        
+    
 
     var _editSurname = function(_this){
          var surnamesDOM = document.getElementsByClassName('surname');
-         for(let i = 0; i < surnamesDOM.length; i++){
-             if(surnamesDOM[i] === _this){
-                myContacts.contacts[i].setSurname(_this.value);
-             }
+         var index = _getIndex(surnamesDOM,_this);
+         myContacts.contacts[index].setSurname(_this.value);
         }
-    }
+    
 
     var _editTelephone = function(_this){
          var telsDOM = document.getElementsByClassName('phone');
-         for(let i = 0; i < telsDOM.length; i++){
-             if(telsDOM[i] === _this){
-                myContacts.contacts[i].setTel(_this.value);
+         var index = _getIndex(telsDOM,_this);
+         myContacts.contacts[index].setTel(_this.value);
              }
-        }
-    }
+        
+    
 
     var _editGender= function(_this){
         var gender = _this.src.replace(/^.*[\\\/]/, '').substring(0,1);
@@ -100,15 +96,16 @@ var appContacts = (function(){
             _this.src = 'img/m.png';
             gender = 'm';
         }
-        var gendersDOM = document.getElementsByClassName('gender');
-         
-         for(let i = 0; i < gendersDOM.length; i++){
-             if(gendersDOM[i] === _this){
-                myContacts.contacts[i].setGender(gender);
-             }
+        
+         var gendersDOM = document.getElementsByClassName('gender');
+         var index = _getIndex(gendersDOM,_this);
+         myContacts.contacts[index].setGender(gender);             
         }
-
-    }    
+        
+    
+    var _getIndex = function(nodeList,_this){
+        return Array.prototype.indexOf.call(nodeList, _this);
+    }
 
     return{
         addContact    : addContact,
