@@ -33,6 +33,10 @@ class List {
     add(contact){
         this.contacts.push(contact);
     }
+    
+    delete(i){
+        this.contacts.splice(i,1);
+    }
 
 }
 

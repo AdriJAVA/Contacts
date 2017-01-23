@@ -16,7 +16,7 @@ var appContacts = (function(){
 
        for(let i = 0; i < contactsDOM.length; i++){
              if(contactsDOM[i] === this.parentNode){
-                myContacts.contacts.splice(i,1);
+                myContacts.delete(i);
              }
         }
 
